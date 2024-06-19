@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+footer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 4rem;
+    height: 580px;
+    background-image: url(../images/svg/backgroundImage.svg);
+}
+
+.colum_primary_footer>img {
+    width: 206px;
+}
+
+.colum_primary_footer {
+
+    display: flex;
+    width: 380px;
+    margin-left: 4rem;
+    flex-direction: column;
+    align-items: first baseline;
+}
+
+.colum_primary_footer>p {
+    color: white;
+    line-height: 30px;
+    font-family: 'Poppins-Regular';
+
+}
+
+.colum_secondary_footer {
+    display: flex;
+    width: 380px;
+    margin-left: 4rem;
+    flex-direction: column;
+    align-items: first baseline;
+}
+
+.colum_secondary_footer>p {
+    color: white;
+    line-height: 30px;
+    font-family: 'Poppins-Regular';
+
+}
+
+.colum_secondary_footer>div {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.flex_footer {
+    display: flex;
+}
+
+.colum_secondary_footer>div>p {
+    font-family: 'Poppins-Regular';
+    font-weight: 300;
+    margin-left: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.colum_bottom{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    background-color: #8DC936;
+}
+
+.colum_bottom > p {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'Poppins-Regular';
+}
+
+
+
+
+
+@media screen and (max-width:720px) {
+
+    footer {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 4rem;
+        height:auto;
+        background-image: url(../images/svg/backgroundMobileImage.svg);
+        
+    }
+
+
+    .flex_footer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .colum_primary_footer {
+        display: flex;
+        width: 80%;
+        margin-left: 0rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .colum_primary_footer>p {
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        font-family: 'Poppins-Regular';
+    
+    }
+    
+    .colum_secondary_footer {
+        display: flex;
+        width: 80%;
+        margin-left: 0rem;
+        flex-direction: column;
+        align-items: first baseline;
+    }
+
+    .colum_three_footer{
+        width: 80%;
+        height: 80vh;
+    }
+
+}

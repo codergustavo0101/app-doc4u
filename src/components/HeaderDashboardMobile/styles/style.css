@@ -1,0 +1,32 @@
+
+.header_dashboard_mobile{
+    display: none;
+}
+
+@media screen and (max-width:720px) {
+
+    .header_dashboard_mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1.4rem;
+        border:1px solid #D8D8D8;
+        height: 145px;
+
+        border-end-start-radius: 20px;
+        border-end-end-radius: 20px;
+      }
+      .user_image_header_mobile{
+        width: 50px;
+        object-fit: cover;
+        position: relative;
+        margin-right: 0.9rem;
+        height: 50px;
+        border-radius: 100px;
+      }
+      .big_head_mobile{
+        width: 60px;
+        height: 60px;
+      } 
+    
+}

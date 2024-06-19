@@ -1,0 +1,71 @@
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 1.0rem;
+    width: 100%;
+}
+
+thead{
+    font-family: "Poppins-SemiBold";
+    color: #201f1f;
+    border-bottom: 3px solid #0b70e2;
+    height: 45px;
+}
+
+th,td{
+    padding:11px ;
+    font-family: "Poppins-SemiBold";
+    color: #323131;
+
+}
+
+.text_primary_table{
+    color: #0b70e2;
+}
+
+tbody tr{
+    border-bottom: 1.8px solid #0b70e2;
+}
+
+td > div{
+    display: flex;
+    align-items: center;
+}
+
+td > div > button{
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: "Poppins-SemiBold";
+    color: white;
+    background-color: #0b70e2;
+    border: none;
+    margin-right: 1.9rem;
+    border-radius: 100px;
+}
+
+
+td > div > img{
+    border-radius: 100%;
+    margin-right: 0.9rem;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+}

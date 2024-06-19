@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family:"Poppins-Bold" ;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+.button_footer{
+    width: 100%;
+    height: 48px;
+    background-color: #0B70E2;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+    margin-top: 0.9rem;
+    font-family:"Poppins-Bold" ;
+    color: white;
+    border-radius: 4px;
+}

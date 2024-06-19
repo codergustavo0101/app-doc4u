@@ -1,0 +1,34 @@
+
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+
+@media screen and (max-width:720px) {
+
+    
+  .textNameTableListManager {
+
+    font-family: "Poppins-Regular";
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    width: 128px;
+    white-space: nowrap;
+    /* Impede que o texto quebre em várias linhas */
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que ultrapasse a largura do contêiner */
+    text-overflow: ellipsis;
+    /* Adiciona reticências (...) para indicar que o texto foi cortado */
+    position: relative;
+    top: 0px;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+
+  }
+
+    
+}

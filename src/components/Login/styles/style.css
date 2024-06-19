@@ -1,0 +1,146 @@
+/* FONTS */
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+/* END FONTS */
+
+.container_login {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.container_login_inputs {
+    margin-top: 10rem;
+    width: 820px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+    border: 1px solid #7A7A7A;
+}
+
+.container_login_inputs>p {
+    font-size: 2.32rem;
+    height: 35px;
+    font-family: "Poppins-SemiBold";
+    color: #0B70E2;
+}
+
+.container_login_inputs>div>.forgot-password {
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: "Poppins-Regular";
+    font-weight: 600;
+    color: #0B57E3;
+}
+
+.container_login_inputs>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_login_inputs {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    margin-top: 0.5rem;
+}
+
+.flex_login_inputs>label {
+    font-family: "Poppins-Regular";
+    font-size: 0.9rem;
+    position: relative;
+    cursor: pointer;
+    top: -10px;
+    color: #383838;
+
+}
+
+.container_login_inputs>div>button {
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 0.9rem;
+    height: 45px;
+    font-size: 1rem;
+    border: none;
+    font-family: "Poppins-Medium";
+    color: white;
+    background-color: #0B70E2;
+}
+
+
+@media screen and (max-width:720px) {
+
+    .container_login_inputs {
+        display: flex;
+        padding-top: 0rem;
+        margin-top: 0rem;
+
+        width: 100%;
+        flex-direction: column;
+        border: none;
+        align-items: center;
+
+    }
+
+
+    .container_login_inputs>div>button {
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%;
+        margin-top: 0.9rem;
+        height: 45px;
+        font-size: 1rem;
+        border: none;
+        font-family: "Poppins-Medium";
+        color: white;
+        background-color: #0B70E2;
+    }
+
+    .container_login_inputs>div {
+        width: 80%;
+    }
+
+    .flex_login_inputs{
+        display: none;
+        align-items: center;
+        height: 10px;
+        width: 20%;
+        margin-top: 0.5rem;
+    }
+    
+    .flex_login_inputs > label {
+        font-family: "Poppins-Regular";
+        font-size: 1rem;
+        width: 220px;
+        position: relative;
+        cursor: pointer;
+        top: -10px;
+        color:#383838;
+        
+    }
+
+}

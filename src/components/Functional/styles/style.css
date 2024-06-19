@@ -1,0 +1,255 @@
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+
+
+.classFuncional {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    gap: 40px;
+
+}
+
+.containerConheca {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    grid-template-rows: 300px;
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+}
+
+.contentConhecaPlan {
+    position: relative;
+    background-color: #0B70E2;
+    justify-content: center;
+    height: 200px;
+    width: 230px;
+    border-radius: 3px;
+    border-bottom: 7px solid rgba(141, 201, 54, 1);
+    margin-bottom: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+
+}
+
+
+.contentConhecaPlan  > img {
+    position: absolute;
+    top: -35%;
+} 
+
+.flex_plan {
+    
+    align-items: center;
+    justify-items: center;
+}
+
+p {
+    font-weight: bold;
+}
+
+
+
+.contentConhecaPlan  > .contentAcesso {
+    height: 120px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+.contentConhecaPlan:hover {
+    transform: scale(1.03);
+    transition-duration: .2s;
+    background-color: rgba(141, 201, 54, 1);
+    border-bottom: 7px solid #0B70E2;
+}
+
+.clean{
+    display: none;
+}
+
+
+.contentConhecaSelect {
+    position: relative;
+    background-color: #0B70E2;
+    justify-content: center;
+    height: 200px;
+    width: 230px;
+    border-radius: 3px;
+    border-bottom: 7px solid rgba(141, 201, 54, 1);
+    margin-bottom: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+
+}
+
+.contentConhecaSelect  > img {
+    position: absolute;
+    top: -35%;
+} 
+
+
+.contentConhecaSelect:hover {
+    transform: scale(1.01);
+    transition-duration: .2s;
+    background-color: rgba(141, 201, 54, 1);
+    border-bottom: 7px solid #0B70E2;
+}
+
+
+.contentConhecaAcesso {
+    position: relative;
+    background-color: #0B70E2;
+    justify-content: center;
+    height: 200px;
+    width: 230px;
+    border-radius: 3px;
+    border-bottom: 7px solid rgba(141, 201, 54, 1);
+    margin-bottom: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.contentConhecaAcesso  > img {
+    position: absolute;
+    top: -35%;
+} 
+
+.contentConhecaAcesso:hover {
+    transform: scale(1.01);
+    transition-duration: .2s;
+    background-color: rgba(141, 201, 54, 1);
+    border-bottom: 7px solid #0B70E2;
+}
+
+
+
+
+.contentConhecaAgende {
+    position: relative;
+    background-color: #0B70E2;
+    justify-content: center;
+    height: 200px;
+    width: 230px;
+    border-radius: 3px;
+    border-bottom: 7px solid rgba(141, 201, 54, 1);
+    margin-bottom: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+
+}
+
+
+.contentConhecaAgende   > img {
+    position: absolute;
+    top: -35%;
+} 
+
+.contentConhecaAgende:hover {
+    transform: scale(1.01);
+    transition-duration: .2s;
+    background-color: rgba(141, 201, 54, 1);
+    border-bottom: 5px solid #0B70E2;
+}
+
+
+
+.classFont {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 720px) {
+
+    .contentConhecaPlan{
+        margin-top: 0rem;
+    }
+
+    .containerConheca {
+        display: grid;
+        grid-template-columns: repeat(2, 240px);
+    }
+
+
+    .classFont {
+        font-size: 29px;
+        font-weight: bold;
+    }
+
+    .clean{
+        display: block;
+        height:40px;
+    }
+
+    .containerConheca > div{
+
+        margin-bottom: 0.9rem;
+        padding: 0.3rem;
+        border-radius:5px;
+    }
+
+    .flex_plan > h1{
+        font-size:1.3rem;
+    }
+    .contentConhecaAgende   > img {
+        position: absolute;
+        top: -35%;
+    } 
+    .flex_plan > p {
+        font-size:0.9rem;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .containerConheca {
+        display: grid;
+        padding-top: 40px;
+        grid-template-columns: repeat(1, 240px);
+    }
+
+
+    .classFont {
+        font-size: 29px;
+        font-weight: bold;
+    }
+}
+

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+
+
+.containerTerms {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.classTerms {
+    font-family: "Poppins-SemiBold";
+    font-size: 42px;
+    line-height: 42px;
+    font-weight: 600;
+    text-align: left;
+    color: #0B70E2;
+}
+
+.classFontTerms {
+    font-family: "Roboto-Regular";
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+    color: #383838;
+}

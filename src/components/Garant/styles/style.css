@@ -1,0 +1,70 @@
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+
+
+.garantContainer {
+    width: 100%;
+    height: 300px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background: rgb(11, 112, 226);
+    background: -moz-linear-gradient(90deg, rgba(11, 112, 226, 1) 0%, rgba(141, 201, 54, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(11, 112, 226, 1) 0%, rgba(141, 201, 54, 1) 100%);
+    background: linear-gradient(90deg, rgba(11, 112, 226, 1) 0%, rgba(141, 201, 54, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b70e2", endColorstr="#8dc936", GradientType=1);
+}
+
+.flex_garant {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.flex_garant >  img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.flex_garant >  p {
+    font-size: 1.45rem;
+    margin-left: 5.75rem;
+    font-family: "Poppins-SemiBold";
+    color: white;
+}
+
+
+@media screen and (max-width:720px) {
+
+    .flex_garant{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .flex_garant >  img{
+        width: 130px;
+        height: 130px;
+        margin-bottom: 0.9rem;
+    }
+    
+    
+    .flex_garant >  p {
+        font-size: 0.85rem;
+        text-align: center;
+        margin-left: 0rem;
+        font-family: "Poppins-SemiBold";
+        color: white;
+    }
+    
+    
+    
+}

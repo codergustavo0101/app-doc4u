@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins/Poppins-Italic.ttf)
+}
+
+
+.containerCarousel {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.classFont{
+    font-family: "Poppins-Bold";
+
+}
+
+.containerAvalia {
+    width: 100%;
+    max-width: 595px;
+    height: 295px;
+    padding: 20px;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins-Bold";
+}
+
+.contentTextAvalia {
+    width: 100%;
+    max-width: 311px;
+    height: 295px;
+    background-color: #DBE7F1;
+}
+
+.image-item {
+    width: 100%;
+    max-width: 138px;
+    height: 138px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+}
+.contentImgAvalia {
+    background: url("../assets/Backgroundcard.png");
+    width: 244px;
+    height: 295px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.contentAvaliaImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contentAvaliaImg > .myImgStar {
+    width: 93px;
+    height: 11px;
+    margin-top: 20px;
+    object-fit: contain;
+}
+
+.contentAvaliaImg > .myImgAspas {
+    width: 28px;
+    height: 31px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 8px;
+    box-shadow: 1px 2px 5px 1px rgba(107, 107, 107, 0.1);
+}
+
+.flex_contentTextAvalia {
+    padding-left: 16px;
+    height: 155px;
+}
+
+.textTitleAvalia {
+    font-size: 20px; 
+    font-weight: bold;
+    font-family: "Poppins-Bold";
+}
+
+.textSubtitleAvalia {
+    font-size: 16px; 
+    font-weight: 400;
+    font-family: "Poppins-Regular";
+}
+
+.textSpanAvalia {
+    font-size: 15px; 
+    font-family: "Poppins-Regular";
+    color: #0B70E2;
+}
+
+
+@media screen and (max-width:720px) {
+    .containerCarousel {
+        width: 100%;
+        max-width:100%;
+        margin: 0 auto;
+        position: relative;
+    
+    }
+    
+    .image-item {
+        width: 100%;
+        max-width: 108px;
+        height: 108px;
+        
+        border-radius: 100%;
+        border: 5px solid #fff;
+    }
+
+    .containerAvalia {
+        width: 90%;
+        
+        height: 295px;
+
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins-Bold";
+    }
+
+    .contentTextAvalia {
+        width: 100%;
+        max-width: 311px;
+        height: 325px;
+        background-color: #DBE7F1;
+    }
+
+    .contentImgAvalia {
+        background: url("../assets/Backgroundcard.png");
+        width: 244px;
+        height: 325px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .textTitleAvalia {
+        font-size: 1.1rem; 
+        font-weight: bold;
+        font-family: "Poppins-Bold";
+    }
+
+    
+.contentAvaliaImg > .myImgAspas {
+    width: 26px;
+    height: 28px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 8px;
+    box-shadow: 1px 2px 5px 1px rgba(107, 107, 107, 0.1);
+}
+
+.textSubtitleAvalia {
+    font-size: 0.8rem; 
+    font-weight: 400;
+    font-family: "Poppins-Regular";
+}
+
+.swiper-pagination-bullets{
+    top: 320px;
+}
+
+}

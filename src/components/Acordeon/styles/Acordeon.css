@@ -1,0 +1,271 @@
+/*FONTES - ACORDEON E QUESTIONSESPECIAL*/
+
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+/*CÓDIGO - ACORDEON E QUESTIONESPECIAL 
+///////////////////////////////////////////////
+*/
+/* Questions */
+/* Questions */
+
+.classFontAcordeon {
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+
+.classFontQuestions {
+
+    font-family: "Poppins-SemiBold";
+    font-size: 38px;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+.containerflexQuestions {
+
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+/*grid grd-cols-2 md:grid-cols-2 gap-8*/
+
+.flex_containerQuestions {
+    width: 50%;
+    transition-duration: 400ms;
+
+}
+
+.acordeonItem {
+    width: 450px;
+    gap: 10px;
+    padding: 5px;
+}
+
+.acordeonItem:hover {
+    transition: all .8s;
+}
+
+
+
+/*RESPONSIVIDADE - QUESTIONSESPECIAL*/
+
+@media (max-width: 940px) {
+
+.flex_containerQuestions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        margin: 0 auto;
+        transition-duration: 400ms;
+    }
+.acordeonItem {
+        width: 100%;
+        max-width: 410px;
+    }
+}
+
+@media(max-width: 640px) {
+
+.classFontAcordeon {
+        font-size: 34px;
+        font-weight: 600;
+        text-align: center;
+        
+    }
+
+
+.flex_containerQuestions {
+        overflow: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        transition-duration: 400ms;
+
+    }
+
+.acordeonItem {
+        width: 100%;
+        max-width: 380px;
+    }
+
+
+
+}
+
+
+
+
+
+/*ACORDEON*/
+/*ACORDEON*/
+/*ACORDEON*/
+
+
+
+.containerAcordeon {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+    gap: 20px;
+    background-color: #fff;
+
+
+    border: 1px solid rgb(204, 204, 204);
+
+
+
+}
+
+.btnAcordeon {
+
+    width: 400px;
+    background: #fff;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 1s;
+
+}
+
+.containerAcord {
+
+    box-shadow: 1px 2px 3px 2px rgba(218, 218, 218, 0.9);
+    border-left: 4px solid #0B57E3;
+    transition: all ease-in .2s;
+}
+
+.containerAcordTwo {}
+
+.divAcordeon {
+    transition: all ease-in .7s;
+    display: grid;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: all ease-in-out;
+    overflow: hidden;
+    transition-duration: 400ms;
+}
+
+.divAcordeonAfter {
+
+}
+
+.divAcordeonAftertwo {
+    grid-template-rows: 0fr;
+    opacity: 0;
+}
+
+/* overflow-hidden p-2 */
+
+.divAcordAfter {
+    overflow: hidden;
+
+}
+
+.spn {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.spnOpen {
+    width: 12.5px;
+    height: 12.5px;
+    object-fit: contain;
+}
+
+.titleAcordeon {
+    width: 100%;
+    font-family: "Poppins-Bold";
+    font-size: 17px;
+    line-height: 31.9px;
+    font-weight: bold;
+    max-width: 280px;
+    text-align: left;
+}
+
+
+ .divAcordAfter> p {
+    font-family: "Poppins-Regular";
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    text-align: left;
+    color: #636363;
+
+}
+
+
+/*RESPONSIVIDADE - ACORDEON*/
+
+
+
+
+@media (max-width: 670px) {
+ 
+.titleAcordeon {
+
+    width: 100%;
+    font-family: "Poppins-Bold";
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 230px;
+    text-align: left;
+}
+
+.acordeonItem {
+        width: 100%;
+        max-width: 350px;
+ 
+}
+
+
+
+.btnAcordeon {
+
+    width: 200px;
+
+}
+
+    .containerAcordeon {
+        width: 80%;
+        max-width: 500px;
+        gap: 10px;
+        background-color: #fff;
+        border: 1px solid rgb(204, 204, 204);
+    }
+}

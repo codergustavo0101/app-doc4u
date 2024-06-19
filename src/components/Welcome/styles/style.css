@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+
+
+.containerWelcome {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+.contents {
+    cursor: pointer;
+    width: 250px;
+    height:230px;
+    background-color: #0082CD;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 0.6rem;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.contents:hover {
+    transition: all .2s;
+    background-color: rgba(141, 201, 54, 1);
+}
+
+.contentBroken>h1 {
+    font-family: "Poppins-SemiBold";
+
+    font-size: 1.3rem;
+}
+
+.contentBroken>p {
+    font-family: "Poppins-SemiBold";
+    font-size: 0.9rem;
+}
+
+.contentBroken>img {
+    width: 57px;
+    object-fit: contain;
+    height: 67px;
+}
+
+
+
+.content>.img {
+    width: 100px;
+    object-fit: contain;
+}
+
+
+@media(max-width: 720px) {
+    .contents {
+        cursor: pointer;
+        width: 69%;
+        height:230px;
+        background-color: #0082CD;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding: 0.2rem;
+        border-radius: 10px;
+        text-align: center;
+    
+    }
+
+    .contentBroken>h1 {
+        font-family: "Poppins-SemiBold";
+    
+        font-size: 1.1rem;
+    }
+    
+    .contentBroken>p {
+        font-family: "Poppins-SemiBold";
+        font-size: 0.8rem;
+    }
+
+    .contentBroken>img {
+        width: 50px;
+        object-fit: contain;
+        height:50px;
+    }
+    
+}
