@@ -1,12 +1,9 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import cardmen from "./assets/homem.png";
 import cardwoman from "./assets/mulher.png";
-import star from "./assets/star.png";
-import aspas from "./assets/aspas.svg";
 import './styles/style.css'
 
 
