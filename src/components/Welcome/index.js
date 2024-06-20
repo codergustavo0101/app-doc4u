@@ -1,5 +1,4 @@
 import React from 'react'
-import Style from "./styles/style.css";
 import Psi from "./images/psiwelcome.png"
 import Clinico from "./images/saudewelcome.png"
 import Medico from "./images/medicowelcome.png"

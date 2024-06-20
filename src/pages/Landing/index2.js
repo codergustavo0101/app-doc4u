@@ -4,7 +4,7 @@ import Header from '../../components/Header'
 import Card from '../../components/Card'
 import Footer from '../../components/Footer'
 import Container from '../../components/Container'
-import Welcome from '../../components/Welcome';
+import Welcome from '../../components/Welcome/index2';
 import Presentation from '../../components/Presentation';
 import Special from '../../components/Special';
 import Garant from '../../components/Garant';
