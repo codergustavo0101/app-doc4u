@@ -46,14 +46,16 @@ const Card = ({onClick,bottomText,bottomTextBottom,bottomTextSecondary,bottomTex
                         <div className='row_option_lexa'>
 
                             <div>
-                            <p className='textPrimary'>Ganhe uma Alexa Echo Pop</p>
+                            <p className='textPrimary'>Ganhe uma <br/> Alexa Echo Pop</p>
                             <p className='textSecondary'>Se o plano não for cancelado</p>
                             </div>
 
-                            <img src={lexaIcon}/>
+                          <div>
+                            <img className='alexa' src={lexaIcon}/>
+                          </div>
+
 
                         </div>
-
                     </div>
 
                 
