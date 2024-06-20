@@ -1,97 +1,140 @@
-import React, { useEffect, useState } from "react";
-import style from "./styles/style.css";
-import { register } from "swiper/element/bundle";
-import "swiper/css"
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import {Container} from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import cardmen from "./assets/homem.png";
 import cardwoman from "./assets/mulher.png";
-import Star from "./assets/star.png";
-import Aspas from "./assets/aspas.svg"
+import star from "./assets/star.png";
+import aspas from "./assets/aspas.svg";
+import './styles/style.css'
 
-register();
 
 const Avaliation = () => {
 
-  const [sliderPerView, setSliderPerView] = useState(2);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2, // Comportamento padrão para telas maiores que 991px
+    slidesToScroll: 1,
+    dotsClass: "slick-dots custom-dots",
+    responsive: [
 
-  const data = [
-    { id: 1, image: cardmen, star: Star, aspas: Aspas, title: "Breno Guimarães", subtitle: "A plataforma proporcionou acesso imediato a especialistas.Sem burocracias, consultas com qualidade e praticidade, só tenho a agradecer.", identific: "Paciente" },
-    { id: 2, image: cardwoman, star: Star,aspas: Aspas, title: "Patricia P.", subtitle: "Minhas família adora a facilidade de consultas para todos os membros. Uma solução economica e prática para o cuidado familiar.", identific: "Paciente" },
-    { id: 3, image: cardmen, star: Star,aspas: Aspas, title: "Gabriel Mendes", subtitle: "Minha família e eu ficamos muito satisfeitos com a assistência psicológica e nutricional oferecidas pela doc4U. Tudo isso sem carência nem custos.", identific: "Paciente" },
-    { id: 4, image: cardwoman, star: Star,aspas: Aspas, title: "Jéssica Almeida", subtitle: "Minhas família adora a facilidade de consultas para todos os membros. Uma solução economica e prática para o cuidado familiar.", identific: "Paciente" },
-  ] 
-
-  useEffect(() => {
-    function handleVerific() {
-      if (window.innerWidth < 720) {
-        setSliderPerView(1)
-      } else {
-        setSliderPerView(2)
-      }
-    }
-
-    handleVerific();
-
-    window.addEventListener("resize", handleVerific)
-
-    return () => {
-      window.removeEventListener("resize", handleVerific)
-    }
-
-  }, [])
-
-
+      {
+        breakpoint: 768, // 767px and below
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
-    <div className='containerCarousel'>
-      <h1 className='classFont'> AVALIAÇÕES REAIS DE CLIENTES </h1>
+    <div className="containerAvaliation">
 
-      <Swiper
-        slidesPerView={sliderPerView}
+      <h1 className='title-avaliation'>Avaliações reais de clientes</h1>
+      <p>Identidades dos clientes foram preservadas.</p>
+      <Slider className='slider' {...settings} >
 
-        pagination={{ clickable: true }}
-      >
-        {data.map((item) => (
-          <SwiperSlide key={item.id}>
+        {/*=======================Slider==================================*/}
+        <div className='card-avaliation'>
 
-            <div className="containerAvalia">{/*Container geral*/}
+          <div className='inner-card'>
 
-              <div className="contentImgAvalia">{/*Container imagem a esquerda*/}
-                <img src={item.image}
-                  alt="Slider"
-                  className='image-item'
-                />
+            <div className='left'>
+              <div className='item-image'>
+                <Image className='pic-profile' src={cardmen}/>
               </div>
-
-              {/****************************************************************/}
-
-              <div className="contentTextAvalia">{/*Container conteudo a direita*/}
-
-                <div className="contentAvaliaImg">{/*Container imagens da direita*/}
-
-                  <img className="myImgAspas" src={item.aspas} />
-                  <img className="myImgStar" src={item.star} />
-
-                </div>
-
-                <div className="flex_contentTextAvalia">{/*Container textos da direita*/}
-
-                  <h2 className="textTitleAvalia">{item.title}</h2>
-                  <p className="textSubtitleAvalia">{item.subtitle}</p>
-                  <span className="textSpanAvalia">{item.identific}</span>
-
-                </div>
-
-              </div>
-
             </div>
 
-          </SwiperSlide>
-        ))}
-      </Swiper>
+
+            <div className='right'>
+              <div className='item-meta'>
+                <div className='item-icon'></div>
+                <div className='stars'></div>
+              </div>
+
+
+              <div className='description '>
+                <h3 className='sub-title'>Breno Guimarães</h3>
+                <p>“A plataforma proporcionou acesso imediato a especialistas.
+                  Sem burocracias, consultas com qualidade e praticidade, só tenho a agradecer.”</p>
+                <span>Paciente</span>
+              </div>
+            </div>
+
+          </div>
+          <div className="overlay"></div>
+        </div>
+        {/*=======================Slider==================================*/}
+
+        {/*=======================Slider==================================*/}
+        <div className='card-avaliation'>
+          <div className='inner-card'>
+
+            <div className='left'>
+              <div className='item-image'>
+                <Image className='pic-profile' src={cardwoman}/>
+              </div>
+            </div>
+
+
+            <div className='right'>
+              <div className='item-meta'>
+                <div className='item-icon'></div>
+                <div className='stars'></div>
+              </div>
+
+
+              <div className='description '>
+                <h3 className='sub-title'>Patricia P.</h3>
+                <p>“Minhas família adora a facilidade de consultas para todos os membros.
+                  Uma solução economica e prática para o cuidado familiar.”</p>
+                <span>Paciente</span>
+              </div>
+            </div>
+          </div>
+          <div className="overlay"></div>
+        </div>
+        {/*=======================Slider==================================*/}
+
+
+        {/*=======================Slider==================================*/}
+        <div className='card-avaliation'>
+          <div className='inner-card'>
+
+            <div className='left'>
+              <div className='item-image'>
+                <Image className='pic-profile' src={cardmen}/>
+              </div>
+            </div>
+
+
+            <div className='right'>
+              <div className='item-meta'>
+                <div className='item-icon'></div>
+                <div className='stars'></div>
+              </div>
+
+
+              <div className='description '>
+                <h3 className='sub-title'>Gabriel Mendes</h3>
+                <p>“A plataforma proporcionou acesso imediato a especialistas.
+                  Sem burocracias, consultas com qualidade e praticidade, só tenho a agradecer.”</p>
+                <span>Paciente</span>
+              </div>
+            </div>
+          </div>
+          <div className="overlay"></div>
+        </div>
+        {/*=======================Slider==================================*/}
+
+
+
+
+      </Slider>
     </div>
   )
 }
