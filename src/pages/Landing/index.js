@@ -54,6 +54,17 @@ const Landing = () => {
       if (localData) {
         setCart([...cart, ...localData])
       }
+
+        
+        if (itemExists.length == 0) {
+
+    
+
+        } else {
+            getTotal()
+
+            console.log('Item já existe no carrinho');
+        }
     }
 
 

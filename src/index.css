@@ -14,6 +14,11 @@ body {
     src: url("./components/Card/fonts/Poppins/Poppins-Bold.ttf");
 }
 
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("./components/Card/fonts/Poppins/Poppins-Medium.ttf");
+}
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -214,10 +219,10 @@ code {
 }
 
 .container {
-    max-width: 3090px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+  max-width: 3090px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .text_primary_box_plans {
@@ -226,6 +231,7 @@ code {
     font-weight: 600;
     line-height: 50px;
 }
+
 
 .box_plans {
     display: flex;

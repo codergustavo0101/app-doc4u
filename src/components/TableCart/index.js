@@ -52,14 +52,14 @@ const TableCart = () => {
                     <tr key={index}>
                         <td>
                             <div>
-                                <button onClick={() => handleDelete(index)}>X</button>
+                                {/* <button onClick={() => handleDelete(index)}>X</button> */}
                                 <img src={item.image} alt={item.name}/>
                                 <p className='text_primary_table'>{item.name}</p>
                             </div>
                         </td>
                         <td>R$ {String(item.price).replace(".",",")}</td>
                         <td>1x</td>
-                        <td>R$ {item.price}</td>
+                        <td>R$ {item.price}</td> 
                     </tr>
                 ))}
             </tbody>
