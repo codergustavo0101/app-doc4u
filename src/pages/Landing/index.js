@@ -55,17 +55,17 @@ const Landing = () => {
         const itemExists = cart.filter(item => item.id == data.id);
         
         if (itemExists.length == 0) {
-            const newCart = [...cart, data];
+            const newCart = [data];
             setCart(newCart)
             
             localStorage.setItem("@LOCAL_CART", JSON.stringify(newCart));
             getTotal()
-            navigate("/cart")
+            navigate("/payment")
     
 
         } else {
             getTotal()
-            navigate("/cart")
+            navigate("/payment")
 
             console.log('Item já existe no carrinho');
         }

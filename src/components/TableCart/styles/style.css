@@ -69,3 +69,8 @@ td > div > img{
     width: 60px;
     height: 60px;
 }
+
+
+@media screen and (max-width:720px) {
+    
+}

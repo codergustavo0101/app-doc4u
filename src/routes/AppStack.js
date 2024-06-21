@@ -7,6 +7,7 @@ import Privacit from '../components/Privacit'
 import TermsUse from '../components/TermsUse'
 import Account from '../pages/Account'
 import Cart from '../pages/Cart'
+import Payment from '../pages/Payment'
 import Dashboard from '../pages/Dashboard'
 import Schedules from '../pages/Schedules'
 const AppStack = () => {
@@ -19,6 +20,7 @@ const AppStack = () => {
                 <Route path='/' element={<Landing />} />
                 <Route path='/account' element={<Account />} />
                 <Route path='/cart' element={<Cart />} />
+                <Route path='/payment' element={<Payment />} />
                 <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/dashboard/schedules' element={<Schedules />} />
                 <Route path='/terms/privacity' element={<Privacit />}/>

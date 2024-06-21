@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+.row_input_payment{
+    display: flex;
+    align-items: center;
+}
+.row_input_payment > p {
+    font-family: "Poppins-Medium";
+    font-size: 1.1rem;
+    color: #292929;
+    width: 320px;
+    margin-right: 1.9rem;
+}
+
+.container_input_payment_select{
+    display: flex;
+    margin-top: 0.7rem;
+    flex-direction: column;
+}
+
+.container_input_payment_select > select{
+    width: 320px;
+    margin-right: 1.9rem;
+    border: none;
+    padding-left: 0.2rem;
+    height: 30px;
+    outline: none;
+    border-radius: 0px;
+    font-family: "Poppins-Medium";
+    border-bottom: 1.4px solid #afafaf;
+}
+
+.container_input_payment_select > label{
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    color: #383838;
+    position: relative;
+    font-family: "Poppins-Regular";
+
+    top:-50px;
+}
+
+.container_input_payment_select > 
+select:focus ~ label,
+select:valid ~ label
+{   
+    position: relative;
+    top: -55px;
+    color: #0B70E2;
+}
+
+input:focus{
+    transition: all ease-in .5s;
+    border-bottom: 1.4px solid #0B70E2;
+}
+
+
+@media screen and (max-width:720px) {
+
+    .row_input_payment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}

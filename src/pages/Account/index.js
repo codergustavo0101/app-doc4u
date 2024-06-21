@@ -4,15 +4,18 @@ import HeaderMobile from '../../components/HeaderMobile'
 import Footer from '../../components/Footer'
 import Login from '../../components/Login'
 const Account = () => {
-    return(
-        <>
+
+
+
+    return (
+
         <section className='account'>
 
-            <Header/>
-            <HeaderMobile/>
-            <Login/>
+            <Header />
+            <HeaderMobile />
+            <Login />
         </section>
-        </>
+
     )
 }
 

@@ -32,6 +32,15 @@
     z-index: 99999;
 }
 
+.container_header_not_fixed{
+    top:0px;
+    max-width: 3020px;
+    width: 100%;
+    margin:0 auto;
+    background-color: white;
+    z-index: 99999;
+}
+
 /* END FONTS */
 
 header{
@@ -47,8 +56,8 @@ header{
 
 header > img{
     object-fit: contain;
-    width: 170px;
-    height: 170px;
+    width: 190px;
+    height: 190px;
 }
 
 header  ul li {
@@ -147,6 +156,9 @@ li:hover::after {
 
 @media screen and (max-width:1344px) {
 
+    .container_header_not_fixed{
+        display: none;
+    }
     .container_header{
         display: none;
     }

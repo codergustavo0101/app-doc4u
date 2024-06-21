@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InputLogin from './components/InputLogin'
 import Footer from '../Footer'
+import api from '../../services/api'
 import style from './styles/style.css'
 const Login = () => {
+    
+    const [mail,setMail] = useState()
+    const [password,setPassword] = useState()
+
+    const handleLogin = async () => {
+
+
+
+
+        const response = await api.post("session/login",{
+
+        })
+
+    }
+    
     return (
         <>
 
@@ -14,18 +30,15 @@ const Login = () => {
 
                     <div>
 
-                        <InputLogin name="Usuário" />
-                        <InputLogin name="Senha" type={"password"} />
-                        <div className='flex_login_inputs'>
-                            <input id='check' name='check' type='checkbox'/>
-                            <label htmlFor='check'> Lembrar senha</label>
-
-                        </div>
+                        <InputLogin onChange={(e) => setMail(e.target.value)} name="Email" />
+                        <InputLogin onChange={(e) => setPassword(e.target.value)} name="Senha" type={"password"} />
+         
                         <button>Acessar</button>
-                        <p className='forgot-password'>Esqueceu a senha?</p>
+                        
+                        <p className='forgot-password'>Não possui uma conta?</p>
                     </div>
                 </div>
-            </div>a
+            </div>
 
             <Footer />
         </>
