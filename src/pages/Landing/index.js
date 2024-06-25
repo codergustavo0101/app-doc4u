@@ -50,7 +50,7 @@ const Landing = () => {
 
     const handleAddCart = (data) => {
         // Verifica se o item já existe no carrinho
-
+        localStorage.setItem("@ID_PLAN",data.id)
 
         const itemExists = cart.filter(item => item.id == data.id);
         
@@ -58,7 +58,7 @@ const Landing = () => {
             const newCart = [data];
             setCart(newCart)
             
-            localStorage.setItem("@LOCAL_CART", JSON.stringify(newCart));
+            localStorage.setItem("@LOCAL_CART", JSON.stringify(newCart));            
             getTotal()
             navigate("/payment")
     
@@ -154,10 +154,11 @@ const Landing = () => {
                 </div>
 
                 <div className='flex_cards_plans'>
-                    <Card onClick={() => handleAddCart({id:1,name:"Plano Família 1",price: "199.99 ",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/INDIVIDUAL-300x300.jpg"})} bottomText={"Plano Família 1 "} bottomTextBottom="Para 1 Pessoa" bottomTextSecondary={"R$ 5,48/pessoa por dia."} bottomTextThree={`12x R$ 199,99 no Cartão de Crédito.`} bottomTextFour={"R$ 1.999,99/ano – A vista, 5% de desconto."} />
-                    <Card onClick={() => handleAddCart({id:2,name:"Plano Família 2",price: "229.99",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/CASAL-300x300.jpg"})}bottomText={"Plano Família 2"} bottomTextBottom="Para 2 Pessoas" bottomTextSecondary={"R$ 3,15/pessoa por dia."} bottomTextThree={"12x R$ 229,99 no Cartão de Crédito."} bottomTextFour={"R$ 2.299,99/ano – A vista, 5% de desconto."} />
-                    <Card onClick={() => handleAddCart({id:3,name:"Plano Família 3",price: "259.99",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/FAMILIA3-300x300.jpg"})}bottomText={"Plano Família 3"} bottomTextBottom="Para 3 Pessoas" bottomTextSecondary={"R$ 2,37/pessoa por dia."} bottomTextThree={"12x R$ 259,99 no Cartão de Crédito."} bottomTextFour={"R$ 2.599,99/ano – A vista, 5% de desconto."} />
-                    <Card onClick={() => handleAddCart({id:4,name:"Plano Família 4",price: "289.99",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/FAMILIA4-300x300.jpg"})}bottomText={"Plano Família 4"} bottomTextBottom="Para 4 Pessoas" bottomTextSecondary={"R$ 1,98/pessoa por dia."} bottomTextThree={"12x R$ 289,99 no Cartão de Crédito."} bottomTextFour={"R$ 2.899,99/ano – A vista, 5% de desconto."} />
+
+                    <Card onClick={() => handleAddCart({id:6,name:"Plano Família 1",price: "199.99 ",yearPrice:"1999.99",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/INDIVIDUAL-300x300.jpg"})} bottomText={"Plano Família 1 "} bottomTextBottom="Para 1 Pessoa" bottomTextSecondary={"R$ 5,48/pessoa por dia."} bottomTextThree={`12x R$ 199,99 no Cartão de Crédito.`} bottomTextFour={"R$ 1.999,99/ano – A vista, 5% de desconto."} />
+                    <Card onClick={() => handleAddCart({id:8,name:"Plano Família 2",price: "229.99",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/CASAL-300x300.jpg"})}bottomText={"Plano Família 2"} bottomTextBottom="Para 2 Pessoas" bottomTextSecondary={"R$ 3,15/pessoa por dia."} bottomTextThree={"12x R$ 229,99 no Cartão de Crédito."} bottomTextFour={"R$ 2.299,99/ano – A vista, 5% de desconto."} />
+                    <Card onClick={() => handleAddCart({id:9,name:"Plano Família 3",price: "259.99",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/FAMILIA3-300x300.jpg"})}bottomText={"Plano Família 3"} bottomTextBottom="Para 3 Pessoas" bottomTextSecondary={"R$ 2,37/pessoa por dia."} bottomTextThree={"12x R$ 259,99 no Cartão de Crédito."} bottomTextFour={"R$ 2.599,99/ano – A vista, 5% de desconto."} />
+                    <Card onClick={() => handleAddCart({id:11,name:"Plano Família 4",price: "289.99",image:"https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/FAMILIA4-300x300.jpg"})}bottomText={"Plano Família 4"} bottomTextBottom="Para 4 Pessoas" bottomTextSecondary={"R$ 1,98/pessoa por dia."} bottomTextThree={"12x R$ 289,99 no Cartão de Crédito."} bottomTextFour={"R$ 2.899,99/ano – A vista, 5% de desconto."} />
                 </div>
             </section>
 
