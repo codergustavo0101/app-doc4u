@@ -3,7 +3,7 @@ import { BigHead } from '@bigheads/core'
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
 
-const InputData = ({ id, client, onClick, name,street, cpf, mail, phone, category,number, service, goal, status, type, time,description, bathroom, district, iptu, m2, code, price, id_prop }) => {
+const InputData = ({ id, client, onClick, name,street, cpf,plan, mail, phone, category,number, service, goal, status, type, time,description, bathroom, district, iptu, m2, code, price, id_prop }) => {
 
     const [usersInCountage, setUserInCountage] = useState([])
     const [image, setImage] = useState()
@@ -83,12 +83,12 @@ const InputData = ({ id, client, onClick, name,street, cpf, mail, phone, categor
                         <>
 
                             <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{name}</p>
-                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{category}</p>
-                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{mail}</p>
-                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{phone} {time}</p>
+                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{cpf}</p>
+                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{phone}</p>
+                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{mail} </p>
 
                             <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{street}</p>
-                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{number}</p>
+                            <p className="textNameTableListManager" style={{ marginLeft: "0.5rem" }}>{plan}</p>
 
 
 

@@ -452,6 +452,8 @@ code {
     flex-wrap: wrap;
   }
 
+
+
   .bottom_menu_open {
     transition: all .5s;
     position: fixed;

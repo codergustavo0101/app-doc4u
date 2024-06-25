@@ -57,9 +57,9 @@ const TableCart = () => {
                                 <p className='text_primary_table'>{item.name}</p>
                             </div>
                         </td>
-                        <td>R$ {String(item.price).replace(".",",")}</td>
+                        <td>R$ {String(item.yearPrice).replace(".",",")}</td>
                         <td>1x</td>
-                        <td>R$ {item.price}</td> 
+                        <td>R$ {item.yearPrice}</td> 
                     </tr>
                 ))}
             </tbody>

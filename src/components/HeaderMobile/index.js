@@ -14,6 +14,13 @@ const HeaderMobile = () => {
 
     }
 
+    
+    const redirectToAccountPage = () => {
+
+        navigate("/account")
+
+    }
+
     return (
 
         <div className='box_header_mobile'>
@@ -40,7 +47,7 @@ const HeaderMobile = () => {
                     <li>Planos</li>
                     <li>Especialidades</li>
                     <li>Contato</li>
-                    <li>Minha Conta</li>
+                    <li onClick={() => redirectToAccountPage()}>Minha Conta</li>
 
                 </div>
 

@@ -42,7 +42,7 @@ const PaymentPage = () => {
     const [year, setYear] = useState()
     const [securityCode, setSecurityCode] = useState()
     const [installments, setInstallments] = useState([])
-    const [price, setPrice] = useState(1999.99); // ou carregar do localStorage
+    const [price, setPrice] = useState(Number(localStorage.getItem("@YEAR_PRICE"))); // ou carregar do localStorage
 
     const [cpf, setCpf] = useState()
     const [mail, setMail] = useState()
@@ -83,6 +83,27 @@ const PaymentPage = () => {
             return toast.error("Informe um nome!")
         }
 
+        if(optionPayment == 2){
+            const response = await api.post("payment/storage/assas/",{
+                "name":name,
+                "email":mail,
+                "cpfCnpj":cpf,
+                "address":"Test",
+                "addressNumber":"Test",
+                "complement":"Test",
+                "id_plan":localStorage.getItem("@ID_PLAN"),
+                "type":2
+            })
+
+
+            if(response.status == 200){
+                window.open(response.data.url,'_blank');
+                return false
+            }
+
+        }
+
+        
         const formatedExpiration = String(expiration).split("")
 
         const response = await api.post("payment/storage/mercadolivre",
@@ -111,7 +132,7 @@ const PaymentPage = () => {
             toast.success("Pagamento realizado com sucesso!")
         
             setTimeout(() => {
-                navigate("sucess/payment")
+                navigate("/sucess/payment")
             },[2000])
 
         } else {
@@ -207,8 +228,8 @@ const PaymentPage = () => {
                     </div>
 
                     <div className='row_input_payment'>
-                        <InputPayment t onChange={(e) => setPassword(e.target.value)} id={5} name="Senha*" />
-                        <InputPayment onChange={(e) => setConfirmPassword(e.target.value)} id={6}  name={"Confirme sua senha *"} />
+                        <InputPayment type={"password"} onChange={(e) => setPassword(e.target.value)} id={5} name="Senha*" />
+                        <InputPayment type={"password"} onChange={(e) => setConfirmPassword(e.target.value)} id={6}  name={"Confirme sua senha *"} />
                     </div>
                     <div>
                         <div className='row_input_payment'>

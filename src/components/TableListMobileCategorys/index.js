@@ -28,7 +28,42 @@ const TableListMobileCategorys = ({ table, type }) => {
     const [valueArray, setValueArray] = useState()
     const [idEdit, setIdEdit] = useState();
     const [idRemove, setIdRemove] = useState();
-    const [categorys, setCategorys] = useState([])
+    const [categorys, setCategorys] = useState([
+        {
+
+            "name":"Guilherme Enrico da Mota",
+            "cpf":"948.860.581-24",
+            "phone":"(96) 99904-0600",
+            "mail":"guilherme.enrico.damota@geopx.com.br",
+            "street":"Avenida Hermes Monteiro da Silva",
+            "plan":"Famila 1"
+
+
+        },
+
+        {
+
+            "name":"Miguel Henrique ",
+            "cpf":"498.794.268-27",
+            "phone":"(11) 95832-9880",
+            "mail":"codergustavo@gmail.com",
+            "street":"Rua test",
+            "plan":"Famila 1"
+
+        },
+
+        {
+
+            "name":"Juan Luís Emanuel Assis",
+            "cpf":"800.805.019-58",
+            "phone":"(95) 98655-5788",
+            "mail":"juan.luis.assis@cordeiromaquinas.com.br",
+            "street":"Travessa José Coelho",
+            "plan":"Famila 1"
+
+        },
+
+])
     const [modalState, setModalState] = useState(false)
     const [modalStateDrive,setModalStateDrive] = useState(false)
     const [modalConfirmVisit,setModalConfirmVisit] = useState(false)
@@ -183,11 +218,13 @@ const TableListMobileCategorys = ({ table, type }) => {
 
                     ?
                     categorys.map(item => {
+                        console.log(item.name)
+
                         return (
 
 
                             <div onClick={() => { setModalState(item.status == 0 ? true : false);setModalStateDrive(item.status == 3 ? true : false); setModalConfirmVisit(item.status == 1 ? true : false);setModalConfirmExecution(item.status == 2 ? true : false);  setIdRemove(item.id);setUserId(item.user_id); setIdEdit(item.id);setCep(item.cep) }}>
-                                <InputData street={`${item.street} `}  number={item.number} status={item.status} category={item.provider_name} mail={item.service_name} time={item.startTime} phone={item.startDate} name={item.user_name} id_prop={item.id_prop} goal={item.goal} code={item.code} location={item.location} type={"category"} description={item.description} bathroom={item.bathroom_num} district="Test" iptu={item.iptu} m2={item.square_meters} price={item.value} onClick={() => { setIdEdit(0) }} id={0} client={0} />
+                                <InputData street={`${item.street} `} plan={item.plan} cpf={item.cpf}   number={item.number} status={item.status} category={item.provider_name} mail={item.mail} time={item.startTime} phone={item.phone} name={item.name} id_prop={item.id_prop} goal={item.goal} code={item.code} location={item.location} type={"category"} description={item.description} bathroom={item.bathroom_num} district="Test" iptu={item.iptu} m2={item.square_meters} price={item.value} onClick={() => { setIdEdit(0) }} id={0} client={0} />
                             </div>
 
                         )
