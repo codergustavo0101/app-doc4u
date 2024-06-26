@@ -16,8 +16,8 @@ body {
 
 
 @font-face {
-  font-family: "Poppins-Medium";
-  src: url("./components/Card/fonts/Poppins/Poppins-Medium.ttf");
+    font-family: "Poppins-Medium";
+    src: url("./components/Card/fonts/Poppins/Poppins-Medium.ttf");
 }
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -219,10 +219,10 @@ code {
 }
 
 .container {
-  max-width: 3090px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+    max-width: 3090px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .text_primary_box_plans {
@@ -232,6 +232,60 @@ code {
     line-height: 50px;
 }
 
+
+.container_payment{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.image_payment_option_check{
+    transition: all .2s;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid #0B57E3;
+    margin-right: 0.9rem;
+    object-fit: cover;
+    height: 80px;
+}
+.image_payment_option_check{
+    cursor: pointer;
+
+    width: 120px;
+    border-radius: 4px;
+    margin-right: 0.9rem;
+    object-fit: cover;
+    height: 80px;
+}
+.box_payment{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box_option_payment{
+    display: flex;
+
+    width: 100%;
+    justify-content: last baseline;
+}
+
+.box_payment > button{
+    width: 350px;
+    cursor: pointer;
+    min-height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 1.9rem;
+    border: none;
+    font-size: 1rem;
+    background-color: #3f3f3f;
+}
 
 .box_plans {
     display: flex;
@@ -338,6 +392,82 @@ code {
         object-fit: cover;
     }
 
+    .container_sucess_payment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text_secondary_sucess_payment{
+        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .text_primary_sucess_payment{
+        font-family: "Poppins-Medium";
+        color: #0B57E3;
+        font-size: 1.3rem;
+    }
+    .container_sucess_payment > p {
+        font-family: "Poppins-Medium";
+
+    }
+    .container_inputs_sucess_payment{
+        margin-top: 0.9rem;
+    }
+
+    .container_inputs_sucess_payment > p {
+        font-family: "Poppins-Medium";
+        margin-bottom: 2.4rem;
+        color: #0B57E3;
+
+    }
+
+    .container_inputs_sucess_payment > inpu{
+        width: 620px;
+    }
+
+    .container_sucess_payment > img {
+        width: 490px;
+        height: 490px;
+    }
+
+    .row_input_assas{
+        display: flex;
+    }
+
+    .row_input_assas > div {
+        width: 320px;
+        margin-top: -2.9rem;
+        margin-right: 1.9rem;
+        display: flex;
+        align-items: center;
+        margin-left: -6rem;
+    }
+    .row_input_assas > div  {
+        color: #0e0e0e;
+        font-size: 0.9rem;
+        font-family: "Poppins-Regular";
+    }
+
+    .row_input_assas > div > p {
+        cursor: pointer;
+
+        margin-left: 0.9rem;
+    }
+
+    .row_input_assas > div > img{
+        cursor: pointer;
+
+        width: 85px;
+        height: 85px;
+    }
+
+
+    .clean_bottom {
+        height: 2rem;
+    }
+
     .carrousel {
         width: 100%;
         margin-top: 7rem;
@@ -442,7 +572,7 @@ code {
 
 @media screen and (max-width: 768px) {
     .box_plans > .text_secondary_box_plans {
-       margin:30px;
+        margin:30px;
     }
 
     .box_plans {

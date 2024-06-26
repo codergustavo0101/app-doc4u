@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 /* COMPONENTS */
 import Header from '../../components/Header'
 import Card from '../../components/Card'
@@ -18,171 +18,149 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination, Scrollbar, A11y, EffectFade} from 'swiper/modules';
 
 const Landing = () => {
-  const {getTotal} = useContext(CartContext)
-  const navigate = useNavigate()
+    const {getTotal} = useContext(CartContext)
+    const navigate = useNavigate()
 
 
-  const [cart, setCart] = useState([])
+    const [cart,setCart] = useState([])
 
-  const slides = [
-    {
-      id: "1",
-      banner: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/bg-banner-nvo-1-scaled.jpg",
-      title: 'doc4u - Saúde integral, física e mental',
-      description: 'Consultas inteligentes para o tratamento de',
-      image: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2023/12/fechar-videochamada-de-amigo-no-telefone-ai-brush-removebg-kwvvs9d.png"
-    },
-    {
-      id: "1",
-      banner: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/bg-banner-nvo-1-scaled.jpg",
-      title: 'doc4u - Saúde integral, física e mental',
-      description: 'Consultas inteligentes para o tratamento de',
-      image: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2023/12/fechar-videochamada-de-amigo-no-telefone-ai-brush-removebg-kwvvs9d.png"
-    },
+    const slides = [
+        { id: "1", banner: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/bg-banner-nvo-1-scaled.jpg", title: 'doc4u - Saúde integral, física e mental', description: 'Consultas inteligentes para o tratamento de', image: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2023/12/fechar-videochamada-de-amigo-no-telefone-ai-brush-removebg-kwvvs9d.png" },
 
-  ];
+    ];
 
-  useEffect(() => {
-
-
-    const localData = JSON.parse(localStorage.getItem("@LOCAL_CART"))
-
-    const itemExists = cart.filter(item => item.id == localData.map(item => item.id));
-
-    if (itemExists.length == 0) {
-
-      if (localData) {
-        setCart([...cart, ...localData])
-      }
+    useEffect(() => {
 
         
-        if (itemExists.length == 0) {
+        const localData = JSON.parse(localStorage.getItem("@LOCAL_CART"))
 
+        const itemExists = cart.filter(item => item.id == localData.map(item => item.id) );
+
+        if(itemExists.length == 0){
+
+            if(localData){
+                setCart([...cart,...localData])
+            }
+        }
+
+
+    },[])
+
+
+    const handleAddCart = (data) => {
+        // Verifica se o item já existe no carrinho
+        localStorage.setItem("@ID_PLAN",data.id)
+        localStorage.setItem("@YEAR_PRICE",data.yearPrice)
+
+        const itemExists = cart.filter(item => item.id == data.id);
+        
+        if (itemExists.length == 0) {
+            const newCart = [data];
+            setCart(newCart)
+            
+            localStorage.setItem("@LOCAL_CART", JSON.stringify(newCart));
+            getTotal()
+            navigate("/payment")
     
 
         } else {
             getTotal()
+            navigate("/payment")
 
             console.log('Item já existe no carrinho');
         }
     }
+    
+    return (
+
+        <Container>
+
+            <Header />
+            <HeaderMobile />
+
+            <section className='carrousel'>
+
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
+                    slidesPerView={1}
+
+                    pagination={{ clickable: true }}
+                    navigation
+                >
+
+                    {slides.map(item => {
+                        return (
+                            <SwiperSlide
+                                key={item.id}
+                                slide
+                            >
+
+                                <div className='flex_carrousel'>
 
 
-  }, [])
+                                    <img src={item.image} className='image_carrousel' />
+                                    <img src={item.banner} className='image_banner' />
+                                    <p className='textPrimary'>{item.title}</p>
+                                    <p className='description'>{item.description}</p>
+                                    <p className='description_secondary'>Todas as doenças</p>
+                                    <button className='animate__animated animate__pulse animate__infinite'>Experimente gratis por 7 dias</button>
+
+                                </div>
 
 
-  const handleAddCart = (data) => {
-    // Verifica se o item já existe no carrinho
+
+                            </SwiperSlide>
+                        )
+                    })}
 
 
-    const itemExists = cart.filter(item => item.id == data.id);
+                </Swiper>
 
-    if (itemExists.length == 0) {
-      const newCart = [...cart, data];
-      setCart(newCart)
-
-      localStorage.setItem("@LOCAL_CART", JSON.stringify(newCart));
-      getTotal()
-      navigate("/cart")
+            </section>
 
 
-    } else {
-      getTotal()
-      navigate("/cart")
 
-      console.log('Item já existe no carrinho');
-    }
-  }
+            {/* END CARROUSEL */}
 
-  return (
+            <section className='about'>
+                <Welcome />
+            </section>
 
-    <Container>
+            {/* END ABOUT */}
 
-      <Header/>
-      <HeaderMobile/>
+            <section className='how_work'>
 
-      <section className='carrousel'>
+                <Presentation />
+                <Functional />
 
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-          slidesPerView={1}
-
-          pagination={{clickable: true}}
-          navigation
-        >
-
-          {slides.map(item => {
-            return (
-              <SwiperSlide
-                key={item.id}
-                slide
-              >
-
-                <div className='flex_carrousel'>
+            </section>
 
 
-                  <img src={item.image} className='image_carrousel'/>
-                  <img src={item.banner} className='image_banner'/>
-                  <p className='textPrimary'>{item.title}</p>
-                  <p className='description'>{item.description}</p>
-                  <p className='description_secondary'>Todas as doenças</p>
-                  <button className='animate__animated animate__pulse animate__infinite'>Experimente gratis por 7 dias
-                  </button>
+            <section className='avaliations'>
 
-                </div>
+                <Avaliation />
 
+            </section>
 
-              </SwiperSlide>
-            )
-          })}
+            <div className='clean_bottom'></div>
 
+            <section className='plans'>
 
-        </Swiper>
+              <div className='box_plans'>
+                <p className='text_primary_box_plans'>Consultas simples e <br/> acessíveis para toda <br/> família</p>
 
-      </section>
+                <em className='text_secondary_box_plans'>Promovemos a saúde da sua família com consultas
+                  virtuais acessíveis, eliminando barreiras financeiras e tornando o cuidado acessível a todos.
+                </em>
 
+              </div>
 
-      {/* END CARROUSEL */}
-
-      <section className='about'>
-        <Welcome/>
-      </section>
-
-      {/* END ABOUT */}
-
-      <section className='how_work'>
-
-        <Presentation/>
-        <Functional/>
-
-      </section>
-
-
-      <section className='avaliations'>
-
-        <Avaliation/>
-
-      </section>
-
-      <div className='clean_bottom'></div>
-
-      <section className='plans'>
-
-        <div className='box_plans'>
-          <p className='text_primary_box_plans'>Consultas simples e <br/> acessíveis para toda <br/> família</p>
-
-          <em className='text_secondary_box_plans'>Promovemos a saúde da sua família com consultas
-            virtuais  acessíveis, eliminando barreiras financeiras e tornando o cuidado acessível a todos.
-          </em>
-
-        </div>
-
-        <div className='flex_cards_plans'>
-          <Card onClick={() => handleAddCart({
-            id: 4,
-            name: "Plano Família 4",
-            price: "289.99",
-            image: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/FAMILIA4-300x300.jpg"
+              <div className='flex_cards_plans'>
+                <Card onClick={() => handleAddCart({
+                  id: 4,
+                  name: "Plano Família 4",
+                  price: "289.99",
+                  image: "https://doctors4uintermediacao.agenciacolors.tech/wp-content/uploads/2024/02/FAMILIA4-300x300.jpg"
           })} bottomText={"Plano Família 4"} bottomTextBottom="Para 4 Pessoas"
                 bottomTextSecondary={"R$ 1,98/pessoa por dia."} bottomTextThree={"12x R$ 289,99 no Cartão de Crédito."}
                 bottomTextFour={"R$ 2.899,99/ano – A vista, 5% de desconto."}/>
@@ -216,27 +194,27 @@ const Landing = () => {
       </section>
 
 
-      <section className='hero'>
+            <section className='hero'>
 
-        <Garant/>
+                <Garant />
 
-      </section>
+            </section>
 
 
-      <section className='specialties'>
-        <Special/>
+            <section className='specialties'>
+                <Special />
 
-      </section>
+            </section>
 
-      <section className='questions'>
-        <QuestionsEspecial/>
-      </section>
+            <section className='questions'>
+                <QuestionsEspecial />
+            </section>
 
-      <div style={{height: "3.9rem"}}></div>
+            <div style={{ height: "3.9rem" }}></div>
 
-      <Footer/>
-    </Container>
-  )
+            <Footer />
+        </Container>
+    )
 }
 
 export default Landing
